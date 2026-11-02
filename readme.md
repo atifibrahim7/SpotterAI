@@ -1,6 +1,19 @@
 # Freight Rate Prediction Challenge
 
-See `Freight_Rate_ML_Assessment.pdf` for the assessment instructions.
+See `freight-rate-ml-assessment-1-.pdf` for the assessment instructions, and `report.md` for my approach and results.
+
+## Quick start
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python train.py
+python score.py --predictions validation_predictions.csv --december-predictions december-chart-inputs.csv
+```
+
+Walkthrough with charts: `freight_rate_model.ipynb` (select the "SpotterAI (.venv)" kernel). It imports the pipeline from `train.py`.
+
+`train.py` writes `validation_predictions.csv`, fills `december-chart-inputs.csv`, and saves metrics to `metrics.json`. Data files are in the repo root (names use hyphens, not the `data/` paths below).
 
 ## What to do
 
